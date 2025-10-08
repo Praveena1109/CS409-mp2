@@ -83,11 +83,18 @@ const DetailView: React.FC = () => {
           <ul className={styles.statsList}>
             {pokemon.stats.map(stat => (
               <li key={stat.stat.name} className={styles.statItem}>
-                {stat.stat.name}: {stat.base_stat}
+                <span className={styles.statName}>{stat.stat.name}: {stat.base_stat}</span>
+                <div className={styles.statBar}>
+                  <div
+                    className={styles.statFill}
+                    style={{ width: `${(stat.base_stat / 255) * 100}%` }}
+                  />
+                </div>
               </li>
             ))}
           </ul>
         </div>
+
       </div>
 
       <div className={styles.navigation}>
