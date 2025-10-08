@@ -1,0 +1,108 @@
+.detail {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.image {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+}
+
+.info {
+  text-align: left;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.statsList {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.statItem {
+  font-size: 1rem;
+  margin: 4px 0;
+}
+
+.navigation {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navButton {
+  background: #1f86da;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.navButton:hover:not(:disabled) {
+  background: #0c5c9e;
+}
+
+.navButton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+
+.backWrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.backButton {
+  background: #1f86da;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.backButton:hover:not(:disabled) {
+  background: #0c5c9e;
+}
+
+.backButton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}

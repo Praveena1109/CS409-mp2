@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import ListView from './pages/ListView';
+import GalleryView from './pages/GalleryView';
+import DetailView from './pages/DetailView';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Navigate to="/list" />} />
+        <Route path="/list" element={<ListView />} />
+        <Route path="/gallery" element={<GalleryView />} />
+        <Route path="/pokemon/:id" element={<DetailView />} />
+      </Routes>
+    </>
   );
-}
+};
 
 export default App;
